@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dress Code — Ruthie & Joey</title>
+  <meta name="description" content="Wedding dress code and reference gallery" />
+
+  <!-- Adobe Fonts (Proxima Nova Extra Wide) -->
+  <link rel="preconnect" href="https://use.typekit.net" />
+  <link rel="stylesheet" href="https://use.typekit.net/fid3lup.css" />
+
+  <style>
+    :root{
+      --bg:#f7f3ee;   /* cream */
+      --ink:#000;
+      --nav-h:56px;   /* fixed footer height */
+      --max:680px;    /* copy column width */
+      --gap:14px;     /* grid gap */
+      --header-gap:clamp(56px, 9vh, 120px);
+    }
+
+    /* Optional local Edwardian for subhead if present */
+    @font-face{
+      font-family:"Edwardian Script ITC";
+      src:url("fonts/EdwardianScriptITC.woff2") format("woff2");
+      font-weight:400; font-style:normal; font-display:swap;
+    }
+
+    /* Reset & base */
+    *{ box-sizing:border-box; }
+    html, body { height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      font-family:"proxima-nova-extra-wide", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      letter-spacing:.06em;
+    }
+
+    /* Page padding so content clears the fixed nav */
+    main{
+      padding-bottom:calc(var(--nav-h) + 12px);
+    }
+
+    /* Heading block */
+    header{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:var(--header-gap) 18px 10px;
+      text-align:center;
+    }
+    .caps{ font-size:15px; letter-spacing:.22em; text-transform:uppercase; }
+    h1{ margin:0 0 16px; font-weight:400; }
+    .script{
+      font-family:"Edwardian Script ITC","proxima-nova-extra-wide", serif;
+      font-size:32px; letter-spacing:0; margin:2px 0 18px;
+    }
+
+    /* Copy */
+    .copy{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 18px 2px;
+      text-align:center;
+      font-size:12px;
+      line-height:1.7;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .copy b{ letter-spacing:.16em; }
+
+    .back{
+      max-width:var(--max);
+      margin:18px auto 6px;
+      padding:0 18px;
+      text-align:center;
+    }
+    .back a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); }
+
+    /* Grid */
+    .grid-wrap{
+      max-width:1200px;
+      margin:22px auto 0;
+      padding:0 18px 24px;
+    }
+    .grid{
+      display:grid;
+      gap:var(--gap);
+      grid-template-columns:repeat(6,1fr);
+    }
+    figure{ margin:0; border-radius:10px; overflow:hidden; background:#fff; }
+    img{
+      display:block; width:100%; height:100%; object-fit:cover;
+      aspect-ratio:3/4;
+    }
+
+    /* Responsive columns */
+    @media (max-width:1200px){ .grid{ grid-template-columns:repeat(5,1fr);} }
+    @media (max-width:992px) { .grid{ grid-template-columns:repeat(4,1fr);} }
+    @media (max-width:768px) { .grid{ grid-template-columns:repeat(3,1fr);} }
+    @media (max-width:520px) { .grid{ grid-template-columns:repeat(2,1fr);} }
+
+    /* Fixed bottom nav — EXACTLY like the home page */
+    .nav-wrap{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      height:var(--nav-h);
+      background:var(--bg);
+      border-top:1px solid rgba(0,0,0,.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:10;
+    }
+    nav{
+      display:flex;
+      gap:28px;
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      line-height:1;
+      white-space:nowrap;
+    }
+    nav a{
+      color:var(--ink);
+      text-decoration:none;
+      padding-bottom:3px;
+      border-bottom:1px solid #000;
+    }
+    @media (max-width:480px){
+      nav{ gap:18px; letter-spacing:.16em; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1 class="caps">Dress Code</h1>
+      <div class="script">1960’s Elegance</div>
+    </header>
+
+    <section class="copy">
+      <p><b>Ladies:</b> Graceful Cocktail Dresses And Formal Gowns Of The Era. Styled Hair & Accessories.</p>
+      <p><b>Gentlemen:</b> Black Tie. Dark Suits, Dagger Collars With A Slim Tie Or Bow, And Polished Shoes.</p>
+    </section>
+
+    <div class="back">
+      <a href="index.html">← Back to Invitation</a>
+    </div>
+
+    <section class="grid-wrap">
+      <div class="grid">
+        <!-- Adjust quantity as needed -->
+        <figure><img src="./assets/dress-code/01.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/02.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/03.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/04.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/05.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/06.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/07.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/08.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/09.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/10.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/11.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/12.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/13.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/14.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/15.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/16.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/17.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/18.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/19.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/20.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/21.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/22.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/23.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/24.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/25.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/26.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/27.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/28.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/29.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/30.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/31.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/32.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/33.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/34.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/35.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/36.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/37.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/38.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/39.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/40.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/41.jpg" alt=""></figure>
+        <figure><img src="./assets/dress-code/42.jpg" alt=""></figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fixed footer nav (same as home) -->
+  <div class="nav-wrap">
+    <nav>
+      <a href="index.html">RSVP</a>
+      <a href="travel.html">Travel</a>
+      <a href="dress-code.html">Dress Code</a>
+      <a href="https://www.zola.com/registry" target="_blank" rel="noopener">Registry</a>
+    </nav>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruthie & Joey — Invitation</title>
+  <meta name="description" content="Ruthie & Joey — February 28, 2026" />
+
+  <!-- Adobe Fonts (Proxima Nova Extra Wide) -->
+  <link rel="preconnect" href="https://use.typekit.net" />
+  <link rel="stylesheet" href="https://use.typekit.net/fid3lup.css" />
+
+  <style>
+    :root{
+      --bg:#f7f3ee; /* cream bar and page background */
+      --ink:#000;
+      --nav-h:56px; /* fixed footer height */
+    }
+
+    /* Reset & base */
+    *{ box-sizing:border-box; }
+    html, body { height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      font-family:"proxima-nova-extra-wide", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      letter-spacing:.06em;
+    }
+
+    /* Vertical hero stack */
+    main{
+      min-height:100%;
+      /* keep last image clear of fixed nav */
+      padding-bottom:calc(var(--nav-h) + 12px);
+      background:var(--bg);
+    }
+    .hero{
+      display:block;
+      width:100%;
+      height:auto;
+      margin:0;
+      padding:0;
+      border:0;
+      vertical-align:middle;
+    }
+
+    /* Fixed bottom nav (cream bar) */
+    .nav-wrap{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      height:var(--nav-h);
+      background:var(--bg);
+      border-top:1px solid rgba(0,0,0,.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:10;
+    }
+    nav{
+      display:flex;
+      gap:28px;                /* more spacing between items */
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      font-size:12px;          /* <- requested size */
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      line-height:1;
+      white-space:nowrap;
+    }
+    nav a{
+      color:var(--ink);
+      text-decoration:none;
+      padding-bottom:3px;
+      border-bottom:1px solid #000; /* thin black underline */
+    }
+
+    /* Small screens: keep spacing comfortable */
+    @media (max-width:480px){
+      nav{ gap:18px; letter-spacing:.16em; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <!-- Stack your full-bleed hero images here (no gaps) -->
+    <img class="hero" src="assets/hero/Wedding_Website_Layout1.jpg" alt="">
+    <img class="hero" src="assets/hero/Wedding_Website_Layout2.jpg" alt="">
+    <img class="hero" src="assets/hero/Wedding_Website_Layout3.jpg" alt="">
+    <img class="hero" src="assets/hero/Wedding_Website_Layout4.jpg" alt="">
+    <img class="hero" src="assets/hero/Wedding_Website_Layout5.jpg" alt="">
+  </main>
+
+  <!-- Fixed footer nav -->
+  <div class="nav-wrap">
+    <nav>
+      <a href="index.html">RSVP</a>
+      <a href="travel.html">Travel</a>
+      <a href="dress-code.html">Dress Code</a>
+      <a href="https://www.zola.com/registry" target="_blank" rel="noopener">Registry</a>
+    </nav>
+  </div>
+
+</body>
+</html>

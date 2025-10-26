@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel — Ruthie & Joey</title>
+  <meta name="description" content="Travel & Hotels — Ruthie & Joey" />
+
+  <!-- Adobe Fonts (Proxima Nova Extra Wide) -->
+  <link rel="preconnect" href="https://use.typekit.net" />
+  <link rel="stylesheet" href="https://use.typekit.net/fid3lup.css" />
+
+  <style>
+    :root{
+      --bg:#f7f3ee;   /* cream */
+      --ink:#000;
+      --nav-h:56px;   /* fixed footer height */
+      --max:720px;
+      --header-gap:clamp(56px, 9vh, 120px);
+    }
+
+    /* Optional local Edwardian (for names/headings) */
+    @font-face{
+      font-family:"Edwardian Script ITC";
+      src:url("fonts/EdwardianScriptITC.woff2") format("woff2");
+      font-weight:400; font-style:normal; font-display:swap;
+    }
+
+    /* Reset & base */
+    *{ box-sizing:border-box; }
+    html, body { height:100%; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      font-family:"proxima-nova-extra-wide", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      letter-spacing:.06em;
+    }
+
+    /* Page padding so content clears the fixed nav */
+    main{
+      padding-bottom:calc(var(--nav-h) + 12px);
+    }
+
+    /* Heading */
+    header{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:var(--header-gap) 18px 10px;
+      text-align:center;
+    }
+    .caps{ font-size:15px; letter-spacing:.22em; text-transform:uppercase; }
+    h1{ margin:0; font-weight:400; }
+
+    /* List */
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 18px 18px; text-align:center; }
+    .list{ list-style:none; padding:0; margin:14px 0 0; }
+    .hotel{ padding:2.2rem 0; }
+
+    .name{
+      font-family:"Edwardian Script ITC","Snell Roundhand","Zapfino",cursive;
+      font-size:32px; font-weight:400; letter-spacing:0; margin:0 0 .5rem;
+    }
+    .addr,.notes,.code{
+      letter-spacing:.02em; line-height:1.6;
+      font-size:clamp(14.5px,2.1vw,16px);
+      margin:.2rem 0;
+    }
+    .notes{ margin-top:.5rem; }
+    .code{ text-transform:uppercase; letter-spacing:.14em; margin-top:.45rem; }
+
+    .row{
+      display:flex; justify-content:center; gap:16px; flex-wrap:wrap; align-items:center;
+      margin-top:.8rem;
+    }
+    .link{
+      text-decoration:none; color:var(--ink);
+      border-bottom:1px solid var(--ink); padding-bottom:2px;
+      letter-spacing:.1em; text-transform:uppercase;
+      font-size:clamp(11px,1.6vw,12px);
+    }
+
+    .back{
+      margin:12px 0 0;
+    }
+    .back a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); }
+
+    /* Fixed bottom nav — EXACT match to Dress Code */
+    .nav-wrap{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      height:var(--nav-h);
+      background:var(--bg);
+      border-top:1px solid rgba(0,0,0,.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:10;
+    }
+    nav{
+      display:flex;
+      gap:28px;
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      line-height:1;
+      white-space:nowrap;
+    }
+    nav a{
+      color:var(--ink);
+      text-decoration:none;
+      padding-bottom:3px;
+      border-bottom:1px solid #000;
+    }
+    @media (max-width:480px){
+      nav{ gap:18px; letter-spacing:.16em; }
+    }
+  </style>
+</head>
+<body>
+
+  <main role="main">
+    <header>
+      <h1 class="caps">Travel</h1>
+    </header>
+
+    <section class="wrap">
+      <ol class="list">
+        <!-- ALO Hotel by Ayres -->
+        <li class="hotel">
+          <div class="name">ALO Hotel by Ayres, Orange</div>
+          <div class="addr">3737 West Chapman Avenue, Orange, CA 92868</div>
+          <div class="notes">15% Discount (good for 3 days before and after). Includes parking and breakfast. Book before Jan 18th.</div>
+          <div class="code">Discount Code — 2510BELARD</div>
+          <div class="row">
+            <a class="link" href="https://www.ayreshotels.com/alo-hotel-by-ayres" target="_blank" rel="noopener">View&nbsp;Hotel</a>
+          </div>
+        </li>
+
+        <!-- Ayres Hotel Orange -->
+        <li class="hotel">
+          <div class="name">Ayres Hotel Orange</div>
+          <div class="addr">200 The City Drive North, Orange, CA 92868</div>
+          <div class="notes">15% Discount (good for 3 days before and after). Includes parking and breakfast. Book before Jan 18th.</div>
+          <div class="code">Discount Code — 2510BELARD</div>
+          <div class="row">
+            <a class="link" href="https://www.ayreshotels.com/ayres-hotel-orange" target="_blank" rel="noopener">View&nbsp;Hotel</a>
+          </div>
+        </li>
+
+        <!-- Hotel Fera -->
+        <li class="hotel">
+          <div class="name">Hotel Fera Anaheim, a DoubleTree by Hilton</div>
+          <div class="addr">100 The City Drive South, Orange, CA 92868</div>
+          <div class="notes">No Block Reserved</div>
+          <div class="row">
+            <a class="link" href="https://www.hilton.com/en/hotels/snaccdt-hotel-fera-anaheim/?SEO_id=GMB-AMER-DT-SNACCDT" target="_blank" rel="noopener">View&nbsp;Hotel</a>
+          </div>
+        </li>
+      </ol>
+
+      <p class="back"><a href="index.html">← Back to Invitation</a></p>
+    </section>
+  </main>
+
+  <!-- Fixed footer nav (same as home & Dress Code) -->
+  <div class="nav-wrap">
+    <nav>
+      <a href="index.html">RSVP</a>
+      <a href="travel.html">Travel</a>
+      <a href="dress-code.html">Dress Code</a>
+      <a href="https://www.zola.com/registry" target="_blank" rel="noopener">Registry</a>
+    </nav>
+  </div>
+
+</body>
+</html>
