@@ -46,18 +46,31 @@
     }
 
     /* Heading block */
-    header{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:var(--header-gap) 18px 10px;
-      text-align:center;
-    }
-    .caps{ font-size:15px; letter-spacing:.22em; text-transform:uppercase; }
-    h1{ margin:0 0 16px; font-weight:400; }
-    .script{
-      font-family:"Edwardian Script ITC","proxima-nova-extra-wide", serif;
-      font-size:32px; letter-spacing:0; margin:2px 0 18px;
-    }
+header{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:var(--header-gap) 18px 10px;
+  text-align:center;
+}
+.caps{ font-size:15px; letter-spacing:.22em; text-transform:uppercase; }
+h1{ margin:0 0 16px; font-weight:400; }
+.script{
+  font-family:"Edwardian Script ITC","Snell Roundhand","Zapfino",cursive !important;
+  font-size:32px;
+  letter-spacing:0;
+  margin:2px 0 18px;
+  font-weight:400;
+  -webkit-text-rendering:optimizeLegibility;
+}
+
+/* Force script font on mobile */
+@media (max-width:680px){
+  .script{
+    font-family:"Edwardian Script ITC","Snell Roundhand","Zapfino",cursive !important;
+    font-size:30px;
+    line-height:1.2;
+  }
+}
 
     /* Copy */
     .copy{
