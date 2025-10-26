@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Travel — Ruthie & Joey</title>
-  <meta name="description" content="Wedding travel details and accommodations" />
+  <meta name="description" content="Travel & Hotels — Ruthie & Joey" />
 
   <!-- Adobe Fonts (Proxima Nova Extra Wide) -->
   <link rel="preconnect" href="https://use.typekit.net" />
@@ -15,20 +15,22 @@
       --bg:#f7f3ee;   /* cream */
       --ink:#000;
       --nav-h:56px;   /* fixed footer height */
-      --max:680px;    /* copy column width */
+      --max:720px;
       --header-gap:clamp(56px, 9vh, 120px);
     }
 
-    /* Optional local Edwardian for subhead */
+    /* Optional local Edwardian (for names/headings) */
     @font-face{
       font-family:"Edwardian Script ITC";
       src:url("fonts/EdwardianScriptITC.woff2") format("woff2");
       font-weight:400; font-style:normal; font-display:swap;
     }
 
+    /* Reset & base */
     *{ box-sizing:border-box; }
-    html, body { height:100%; margin:0; padding:0; }
+    html, body { height:100%; }
     body{
+      margin:0;
       background:var(--bg);
       color:var(--ink);
       -webkit-font-smoothing:antialiased;
@@ -37,48 +39,50 @@
       letter-spacing:.06em;
     }
 
+    /* Page padding so content clears the fixed nav */
     main{
       padding-bottom:calc(var(--nav-h) + 12px);
     }
 
+    /* Heading */
     header{
       max-width:var(--max);
       margin:0 auto;
-      padding:var(--header-gap) 18px 20px;
+      padding:var(--header-gap) 18px 10px;
       text-align:center;
     }
     .caps{ font-size:15px; letter-spacing:.22em; text-transform:uppercase; }
-    h1{ margin:0 0 16px; font-weight:400; }
-    .script{
-      font-family:"Edwardian Script ITC","proxima-nova-extra-wide", serif;
-      font-size:32px; letter-spacing:0; margin:2px 0 18px;
+    h1{ margin:0; font-weight:400; }
+
+    /* List */
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 18px 18px; text-align:center; }
+    .list{ list-style:none; padding:0; margin:14px 0 0; }
+    .hotel{ padding:2.2rem 0; }
+
+    .name{
+      font-family:"Edwardian Script ITC","Snell Roundhand","Zapfino",cursive;
+      font-size:32px; font-weight:400; letter-spacing:0; margin:0 0 .5rem;
+    }
+    .addr,.notes,.code{
+      letter-spacing:.02em; line-height:1.6;
+      font-size:clamp(14.5px,2.1vw,16px);
+      margin:.2rem 0;
+    }
+    .notes{ margin-top:.5rem; }
+    .code{ text-transform:uppercase; letter-spacing:.14em; margin-top:.45rem; }
+
+    .row{
+      display:flex; justify-content:center; gap:16px; flex-wrap:wrap; align-items:center;
+      margin-top:.8rem;
+    }
+    .link{
+      text-decoration:none; color:var(--ink);
+      border-bottom:1px solid var(--ink); padding-bottom:2px;
+      letter-spacing:.1em; text-transform:uppercase;
+      font-size:clamp(11px,1.6vw,12px);
     }
 
-    .copy{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 18px 40px;
-      text-align:center;
-      font-size:12px;
-      line-height:1.7;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-    }
-    .copy b{ letter-spacing:.16em; }
-
-    /* Optional image grid (for hotel, area, or map photos) */
-    .grid-wrap{
-      max-width:1000px;
-      margin:24px auto 0;
-      padding:0 18px 24px;
-      display:grid;
-      gap:14px;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    }
-    figure{ margin:0; border-radius:10px; overflow:hidden; background:#fff; }
-    img{ display:block; width:100%; height:100%; object-fit:cover; }
-
-    /* Footer nav (same across site) */
+    /* Fixed bottom nav — EXACT match to Dress Code */
     .nav-wrap{
       position:fixed;
       left:0; right:0; bottom:0;
@@ -115,26 +119,48 @@
 </head>
 <body>
 
-  <main>
+  <main role="main">
     <header>
       <h1 class="caps">Travel</h1>
-      <div class="script">Getting There & Staying There</div>
     </header>
 
-    <section class="copy">
-      <p>Our celebration will take place in beautiful Orange County, California.</p>
-      <p>Below you’ll find hotel recommendations, airports, and transportation details.</p>
-    </section>
+    <section class="wrap">
+      <ol class="list">
+        <!-- ALO Hotel by Ayres -->
+        <li class="hotel">
+          <div class="name">ALO Hotel by Ayres, Orange</div>
+          <div class="addr">3737 West Chapman Avenue, Orange, CA 92868</div>
+          <div class="notes">15% Discount (good for 3 days before and after). Includes parking and breakfast. Book before Jan 18th.</div>
+          <div class="code">Discount Code — 2510BELARD</div>
+          <div class="row">
+            <a class="link" href="https://www.ayreshotels.com/alo-hotel-by-ayres" target="_blank" rel="noopener">View&nbsp;Hotel</a>
+          </div>
+        </li>
 
-    <section class="grid-wrap">
-      <!-- Replace these images with real ones from your /assets/travel folder -->
-      <figure><img src="./assets/travel/01.jpg" alt="Hotel"></figure>
-      <figure><img src="./assets/travel/02.jpg" alt="Beach"></figure>
-      <figure><img src="./assets/travel/03.jpg" alt="Map"></figure>
+        <!-- Ayres Hotel Orange -->
+        <li class="hotel">
+          <div class="name">Ayres Hotel Orange</div>
+          <div class="addr">200 The City Drive North, Orange, CA 92868</div>
+          <div class="notes">15% Discount (good for 3 days before and after). Includes parking and breakfast. Book before Jan 18th.</div>
+          <div class="code">Discount Code — 2510BELARD</div>
+          <div class="row">
+            <a class="link" href="https://www.ayreshotels.com/ayres-hotel-orange" target="_blank" rel="noopener">View&nbsp;Hotel</a>
+          </div>
+        </li>
+
+        <!-- Hotel Fera -->
+        <li class="hotel">
+          <div class="name">Hotel Fera Anaheim, a DoubleTree by Hilton</div>
+          <div class="addr">100 The City Drive South, Orange, CA 92868</div>
+          <div class="notes">No Block Reserved</div>
+          <div class="row">
+            <a class="link" href="https://www.hilton.com/en/hotels/snaccdt-hotel-fera-anaheim/?SEO_id=GMB-AMER-DT-SNACCDT" target="_blank" rel="noopener">View&nbsp;Hotel</a>
+          </div>
+        </li>
+      </ol>
     </section>
   </main>
 
-  <!-- Fixed footer nav -->
   <div class="nav-wrap">
     <nav>
       <a href="rsvp.html">RSVP</a>
