@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RSVP — Ruthie & Joey</title>
+  <meta name="description" content="RSVP for Ruthie & Joey's wedding on Zola — February 28, 2026" />
+
+  <!-- Adobe Fonts (Proxima Nova Extra Wide) -->
+  <link rel="preconnect" href="https://use.typekit.net" />
+  <link rel="stylesheet" href="https://use.typekit.net/fid3lup.css" />
+
+  <!-- Optional local Edwardian for script headings -->
+  <style>
+    @font-face {
+      font-family: "Edwardian Script ITC";
+      src: url("fonts/EdwardianScriptITC.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #f7f3ee;
+      --ink: #000;
+      --nav-h: 56px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      font-family: "proxima-nova-extra-wide", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      letter-spacing: .06em;
+    }
+
+    main {
+      min-height: 100%;
+      padding-bottom: calc(var(--nav-h) + 14px);
+    }
+
+    header {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: clamp(56px, 9vh, 120px) 18px 10px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-weight: 400;
+      font-size: 15px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .script {
+      font-family: "Edwardian Script ITC", "Snell Roundhand", "Zapfino", cursive;
+      font-size: 32px;
+      letter-spacing: 0;
+      margin: 2px 0 18px;
+    }
+
+    .copy {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 18px 8px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.7;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .actions { text-align: center; margin: 16px 0 6px; }
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 12px;
+      border: 1px solid var(--ink);
+      padding: 12px 26px;
+      border-radius: 999px;
+      transition: background .18s;
+    }
+    .button:hover { background: var(--ink); color: var(--bg); }
+
+    .nav-wrap {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      height: var(--nav-h);
+      background: var(--bg);
+      border-top: 1px solid rgba(0, 0, 0, .12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #000;
+    }
+    @media (max-width: 480px) {
+      nav { gap: 18px; letter-spacing: .16em; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1>RSVP</h1>
+      <div class="script">Zola</div>
+    </header>
+
+    <section class="copy">
+      <p>Visit our Zola page to RSVP and confirm your attendance.</p>
+    </section>
+
+    <div class="actions">
+      <a class="button"
+         href="https://www.zola.com/wedding/ruthieandjoey2026"
+         target="_blank"
+         rel="noopener noreferrer">
+        RSVP on Zola →
+      </a>
+    </div>
+  </main>
+
+  <!-- Fixed footer nav (same as home & Dress Code) -->
+<div class="nav-wrap">
+  <nav>
+    <a href="rsvp.html">RSVP</a>
+    <a href="travel.html">Travel</a>
+    <a href="dress-code.html">Dress Code</a>
+    <a href="registry.html">Registry</a>
+  </nav>
+</div>
+
+</body>
+</html>
